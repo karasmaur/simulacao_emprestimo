@@ -1,0 +1,261 @@
+<root>
+      <row>
+      <string>nabil.assi@bell.ca</string>
+      <boolean xsi:nil="true"/>
+      <string>Nabil Assi</string>
+      <string>nabil.assi@bell.ca</string>
+      <integer>1</integer>
+      <timestamp>2019-01-22T20:13:45.000Z</timestamp>
+      <string xsi:nil="true"/>
+      <integer>7</integer>
+      <binary xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string>dFoAJYDNFp6O69QDlgDrqQbnHUOUJ7nS</string>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <timestamp xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string>2e704258-a398-48a2-b872-d01a8b4f2813</string>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <timestamp xsi:nil="true"/>
+      <integer>1</integer>
+      <boolean xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <string>project_name,issuekey,summary,worklog_started,worklog_timeSpentSeconds,status</string>
+      <string xsi:nil="true"/>
+      <string>America/Toronto</string>
+      <string>nabil.assi@bell.ca</string>
+      <string>nabiassi</string>
+      <string xsi:nil="true"/>
+      <timestamp xsi:nil="true"/>
+      <boolean xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+    </row>
+    <row>
+      <string>mario.barbieri</string>
+      <boolean xsi:nil="true"/>
+      <string>Mario Barbieri</string>
+      <string>mario.barbieri@bell.ca</string>
+      <integer>2</integer>
+      <timestamp>2018-12-05T16:16:41.000Z</timestamp>
+      <string xsi:nil="true"/>
+      <integer>0</integer>
+      <binary xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <timestamp xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <timestamp xsi:nil="true"/>
+      <integer>1</integer>
+      <boolean xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string>America/Toronto</string>
+      <string>mario.barbieri</string>
+      <string>mario.barbieri</string>
+      <string xsi:nil="true"/>
+      <timestamp xsi:nil="true"/>
+      <boolean xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+    </row>
+    <row>
+      <string>aline.robicheau</string>
+      <boolean xsi:nil="true"/>
+      <string>Aline Robicheau</string>
+      <string>aline.robicheau@bell.ca</string>
+      <integer>3</integer>
+      <timestamp xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <binary xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <timestamp xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <timestamp xsi:nil="true"/>
+      <integer>1</integer>
+      <boolean xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string>America/Toronto</string>
+      <string>aline.robicheau</string>
+      <string>aline.robicheau</string>
+      <string xsi:nil="true"/>
+      <timestamp xsi:nil="true"/>
+      <boolean xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+    </row>
+    <row>
+      <string>wenting.jin@bell.ca</string>
+      <boolean xsi:nil="true"/>
+      <string>Wenting(Wendy) Jin</string>
+      <string>wenting.jin@bell.ca</string>
+      <integer>4</integer>
+      <timestamp xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <binary xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <timestamp xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <timestamp xsi:nil="true"/>
+      <integer>1</integer>
+      <boolean xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string>America/Toronto</string>
+      <string>wenting.jin@bell.ca</string>
+      <string>wentijin</string>
+      <string xsi:nil="true"/>
+      <timestamp xsi:nil="true"/>
+      <boolean xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+    </row>
+    <row>
+      <string>andrea.vitale</string>
+      <boolean xsi:nil="true"/>
+      <string>Andrea Vitale</string>
+      <string>a.vitale@bell.ca</string>
+      <integer>5</integer>
+      <timestamp>2019-02-25T16:06:19.000Z</timestamp>
+      <string xsi:nil="true"/>
+      <integer>18</integer>
+      <binary xsi:nil="true"/>
+      <string>YXbNSckHtz9VC9LIbmvW79aXUVx06oc7</string>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <timestamp xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <timestamp xsi:nil="true"/>
+      <integer>1</integer>
+      <boolean xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string>America/Toronto</string>
+      <string>andrea.vitale</string>
+      <string>andrea.vitale2</string>
+      <string xsi:nil="true"/>
+      <timestamp xsi:nil="true"/>
+      <boolean xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+    </row>
+    <row>
+      <string>jen.moseley</string>
+      <boolean xsi:nil="true"/>
+      <string>Jennifer Moseley</string>
+      <string>jennifer.moseley@bell.ca</string>
+      <integer>6</integer>
+      <timestamp>2019-02-26T14:00:05.000Z</timestamp>
+      <string xsi:nil="true"/>
+      <integer>26</integer>
+      <binary xsi:nil="true"/>
+      <string>MquMhKClwoNkp70idP6sruADMzzQPhUf</string>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <timestamp xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <timestamp xsi:nil="true"/>
+      <integer>1</integer>
+      <boolean xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string>America/Toronto</string>
+      <string>jen.moseley</string>
+      <string>jen.moseley</string>
+      <string xsi:nil="true"/>
+      <timestamp xsi:nil="true"/>
+      <boolean xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+    </row>
+    <row>
+      <string>aurora.casale</string>
+      <boolean xsi:nil="true"/>
+      <string>Aurora Casale</string>
+      <string>aurora.casale@bell.ca</string>
+      <integer>7</integer>
+      <timestamp xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <binary xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <timestamp xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <timestamp xsi:nil="true"/>
+      <integer>1</integer>
+      <boolean xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string>America/Toronto</string>
+      <string>aurora.casale</string>
+      <string>aurora.casale</string>
+      <string xsi:nil="true"/>
+      <timestamp xsi:nil="true"/>
+      <boolean xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+    </row>
+</root>
