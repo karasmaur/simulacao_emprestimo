@@ -1,11 +1,19 @@
-import { GET_ERRORS } from "../actions/types";
+import { GET_CLIENTES, GET_CLIENTE } from "../actions/types";
 
-const initialState = {};
+const initialState = {
+  clientes: [],
+  cliente: {}
+};
 
 export default function(state = initialState, action) {
   switch (action.type) {
-    case GET_ERRORS:
-      return action.payload;
+    case GET_CLIENTES:
+      return {
+        ...state,
+        clientes: action.payload
+      };
+    case GET_CLIENTE:
+      return { ...state, cliente: action.payload };
     default:
       return state;
   }

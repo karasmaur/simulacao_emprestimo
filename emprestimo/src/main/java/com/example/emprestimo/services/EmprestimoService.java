@@ -36,5 +36,11 @@ public class EmprestimoService {
         return emprestimoRepository.save(emprestimo);
     }
 
+    public Emprestimo findEmprestimoById(Long id){
+        Emprestimo emprestimo = emprestimoRepository.findEmprestimoById(id);
+
+        return emprestimo;
+    }
+
 
 }

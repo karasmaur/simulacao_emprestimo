@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { createCliente } from "../../actions/clienteActions";
 import classnames from "classnames";
 
-class AddEmprestimo extends Component {
+class AddCliente extends Component {
   constructor() {
     super();
     this.state = {

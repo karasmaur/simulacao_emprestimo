@@ -27,13 +27,13 @@ class ClienteItem extends Component {
             </div>
             <div className="col-md-4 d-none d-lg-block">
               <ul className="list-group">
-                <a href="#">
+                <Link to={`/addEmprestimo/${cliente.id}`}>
                   <li className="list-group-item board">
                     <i className="fa fa-flag-checkered pr-1">
                       Simular Empréstimo
                     </i>
                   </li>
-                </a>
+                </Link>
                 <Link to={`/updateCliente/${cliente.id}`}>
                   <li className="list-group-item update">
                     <i className="fa fa-edit pr-1">Editar cadastro</i>

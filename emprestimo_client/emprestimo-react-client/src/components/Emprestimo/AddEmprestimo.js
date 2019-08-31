@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { createEmprestimo } from "../../actions/emprestimoActions";
+import { getCliente } from "../../actions/clienteActions";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import classnames from "classnames";
@@ -8,12 +9,11 @@ class AddEmprestimo extends Component {
   constructor() {
     super();
     this.state = {
-      id: "",
       valorContratado: "",
       prazo: "",
       juros: "",
       valorTotal: "",
-      cliente: { id: "", nome: "", rendimentoMensal: "" }
+      cliente: ""
     };
 
     this.onChange = this.onChange.bind(this);
@@ -27,8 +27,8 @@ class AddEmprestimo extends Component {
   }
 
   componentDidMount() {
-    const { id } = this.props.match.params;
-    this.props.getCliente(id, this.props.history);
+    const { clienteId } = this.props.match.params;
+    this.props.getCliente(clienteId, this.props.history);
   }
 
   onChange(e) {
@@ -37,69 +37,67 @@ class AddEmprestimo extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-    const updatedCliente = {
-      id: this.state.id,
-      nome: this.state.nome,
-      rendimentoMensal: this.state.rendimentoMensal,
-      endereco: this.state.endereco
+    const newEmprestimo = {
+      valorContratado: this.state.valorContratado,
+      prazo: this.state.prazo
     };
-    this.props.createCliente(updatedCliente, this.props.history);
+    this.props.createEmprestimo(
+      this.state.id,
+      newEmprestimo,
+      this.props.history
+    );
   }
 
   render() {
+    const { emprestimo } = this.props;
     return (
       <div>
         <div className="cliente">
           <div className="container">
             <div className="row">
               <div className="col-md-8 m-auto">
-                <h5 className="display-4 text-center">
-                  Editar cadastro de cliente
-                </h5>
+                <h5 className="display-4 text-center">Simular empréstimo</h5>
                 <hr />
+                <p>Nome do Cliente: {this.state.nome}</p>
+                <p>Rendimento Mensal: {this.state.rendimentoMensal}</p>
+                <p>Risco: {this.state.cliente.risco}</p>
                 <form onSubmit={this.onSubmit}>
                   <div className="form-group">
                     <input
                       type="text"
                       className="form-control form-control-lg"
-                      placeholder="ID"
-                      name="id"
-                      value={this.state.id}
+                      placeholder="Valor a contratar"
+                      name="valorContratado"
+                      value={this.state.valorContratado}
+                      onChange={this.onChange}
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="numeric"
+                      className="form-control form-control-lg"
+                      placeholder="Prazo(Mensal)"
+                      name="prazo"
+                      value={this.state.prazo}
+                      onChange={this.onChange}
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="numeric"
+                      className="form-control form-control-lg"
+                      placeholder="Valor total"
+                      name="valorTotal"
+                      value={new Intl.NumberFormat("pt-BR", {
+                        style: "currency",
+                        currency: "BRL"
+                      }).format(emprestimo.valorTotal || 0)}
                       disabled
                     />
                   </div>
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control form-control-lg"
-                      placeholder="Nome"
-                      name="nome"
-                      value={this.state.nome}
-                      onChange={this.onChange}
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control form-control-lg"
-                      placeholder="Rendimento Mensal"
-                      name="rendimentoMensal"
-                      value={this.state.rendimentoMensal}
-                      onChange={this.onChange}
-                    />
-                  </div>
-                  <div className="form-group">
-                    <textarea
-                      className="form-control form-control-lg"
-                      placeholder="Endereço"
-                      name="endereco"
-                      value={this.state.endereco}
-                      onChange={this.onChange}
-                    />
-                  </div>
-
                   <input
                     type="submit"
+                    value="Simular"
                     className="btn btn-primary btn-block mt-4"
                   />
                 </form>
@@ -118,9 +116,12 @@ AddEmprestimo.propTyps = {
   cliente: PropTypes.object.isRequired
 };
 
-const mapStateToProps = state => ({ cliente: state.cliente.cliente });
+const mapStateToProps = state => ({
+  cliente: state.cliente.cliente,
+  emprestimo: state.emprestimo.emprestimo
+});
 
 export default connect(
   mapStateToProps,
-  { getCliente, createCliente }
+  { getCliente, createEmprestimo }
 )(AddEmprestimo);
