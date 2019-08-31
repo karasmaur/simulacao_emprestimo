@@ -22,9 +22,11 @@ class Clientes extends Component {
               <CreateClienteButton />
               <br />
               <hr />
-              {clientes.map(cliente => (
-                <ClienteItem key={cliente.id} cliente={cliente} />
-              ))}
+              {clientes
+                .sort((a, b) => b.id - a.id)
+                .map(cliente => (
+                  <ClienteItem key={cliente.id} cliente={cliente} />
+                ))}
             </div>
           </div>
         </div>

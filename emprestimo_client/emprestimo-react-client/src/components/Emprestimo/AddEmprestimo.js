@@ -21,9 +21,9 @@ class AddEmprestimo extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    const { id, nome, rendimentoMensal, endereco } = nextProps.cliente;
+    const { id, nome, rendimentoMensal, endereco, risco } = nextProps.cliente;
 
-    this.setState({ id, nome, rendimentoMensal, endereco });
+    this.setState({ id, nome, rendimentoMensal, endereco, risco });
   }
 
   componentDidMount() {
@@ -60,7 +60,7 @@ class AddEmprestimo extends Component {
                 <hr />
                 <p>Nome do Cliente: {this.state.nome}</p>
                 <p>Rendimento Mensal: {this.state.rendimentoMensal}</p>
-                <p>Risco: {this.state.cliente.risco}</p>
+                <p>Risco: {this.state.risco}</p>
                 <form onSubmit={this.onSubmit}>
                   <div className="form-group">
                     <input
