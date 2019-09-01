@@ -1,8 +1,6 @@
 package com.example.emprestimo.web;
 
-import com.example.emprestimo.domain.Cliente;
 import com.example.emprestimo.domain.Emprestimo;
-import com.example.emprestimo.services.ClienteService;
 import com.example.emprestimo.services.EmprestimoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -23,7 +21,7 @@ public class EmprestimoController {
     @PostMapping("/{clienteId}")
     public ResponseEntity<?> createNewEmprestimo(@Valid @PathVariable Long clienteId, @RequestBody Emprestimo emprestimo, BindingResult result){
 
-        Emprestimo returnEmprestimo = emprestimoService.saverOrUpdateEmprestimo(clienteId, emprestimo);
+        Emprestimo returnEmprestimo = emprestimoService.simularEmprestimo(clienteId, emprestimo);
 
         return new ResponseEntity<Emprestimo>(returnEmprestimo, HttpStatus.CREATED);
     }

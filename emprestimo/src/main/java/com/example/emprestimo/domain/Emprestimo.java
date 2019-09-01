@@ -13,12 +13,12 @@ public class Emprestimo {
     @GeneratedValue
     @ManyToOne
     private Cliente cliente;
-    private double valorContratado;
+    private Double valorContratado;
     private int prazo;
     @GeneratedValue
-    private double juros;
+    private Double juros;
     @GeneratedValue
-    private double valorTotal;
+    private Double valorTotal;
 
     public Emprestimo() {
     }
@@ -31,11 +31,19 @@ public class Emprestimo {
         this.id = id;
     }
 
-    public double getValorContratado() {
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public Double getValorContratado() {
         return valorContratado;
     }
 
-    public void setValorContratado(double valorContratado) {
+    public void setValorContratado(Double valorContratado) {
         this.valorContratado = valorContratado;
     }
 
@@ -47,27 +55,19 @@ public class Emprestimo {
         this.prazo = prazo;
     }
 
-    public double getJuros() {
+    public Double getJuros() {
         return juros;
     }
 
-    public void setJuros(double juros) {
+    public void setJuros(Double juros) {
         this.juros = juros;
     }
 
-    public double getValorTotal() {
+    public Double getValorTotal() {
         return valorTotal;
     }
 
-    public void setValorTotal(double valorTotal) {
+    public void setValorTotal(Double valorTotal) {
         this.valorTotal = valorTotal;
-    }
-
-    public Cliente getCliente() {
-        return cliente;
-    }
-
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
     }
 }

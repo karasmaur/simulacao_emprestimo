@@ -11,36 +11,41 @@ import org.springframework.stereotype.Service;
 @Service
 public class EmprestimoService {
 
-    @Autowired
     EmprestimoRepository emprestimoRepository;
-
-    @Autowired
     ClienteRepository clienteRepository;
 
-    public Emprestimo saverOrUpdateEmprestimo(Long clienteId, Emprestimo emprestimo){
+    @Autowired
+    public EmprestimoService(EmprestimoRepository emprestimoRepository, ClienteRepository clienteRepository) {
+        this.emprestimoRepository = emprestimoRepository;
+        this.clienteRepository = clienteRepository;
+    }
+
+    public Emprestimo simularEmprestimo(Long clienteId, Emprestimo emprestimo){
 
         Cliente cliente = clienteRepository.findClienteById(clienteId);
         emprestimo.setCliente(cliente);
+        emprestimo.setJuros(buscarJuros(cliente.getRisco()));
+        emprestimo.setValorTotal(calcularValorTotal(emprestimo));
 
-        // Seta o juros do emprestimo baseado no risco do cliente.
-        if(cliente.getRisco().equals(Risco.A))
-            emprestimo.setJuros(1.9);
-        else if(cliente.getRisco().equals(Risco.B))
-            emprestimo.setJuros(5);
-        else
-            emprestimo.setJuros(10);
-
-        // Calculo do juros composto: M = C x (1 + i)^t - M = Montante, C = Valor inicial, i = juros, t = prazo
-        emprestimo.setValorTotal(emprestimo.getValorContratado() * Math.pow((1 + (emprestimo.getJuros()/100)), emprestimo.getPrazo()));
-
-        return emprestimoRepository.save(emprestimo);
-    }
-
-    public Emprestimo findEmprestimoById(Long id){
-        Emprestimo emprestimo = emprestimoRepository.findEmprestimoById(id);
+        emprestimoRepository.save(emprestimo);
 
         return emprestimo;
     }
 
+    public Double calcularValorTotal(Emprestimo emprestimo) {
+        // Calculo do juros composto: M = C x (1 + i)^t - M = Montante, C = Valor inicial, i = juros, t = prazo
+        return emprestimo.getValorContratado() * Math.pow((1 + (emprestimo.getJuros()/100)), emprestimo.getPrazo());
+    }
 
+    public Double buscarJuros(Risco risco) {
+        // Seta o juros do emprestimo baseado no risco do cliente.
+        if(risco.equals(Risco.A))
+            return 1.9;
+        else if(risco.equals(Risco.B))
+            return 5d;
+        else if(risco.equals(Risco.C))
+            return 10d;
+        else
+            throw new RuntimeException("Risco inválido!");
+    }
 }
