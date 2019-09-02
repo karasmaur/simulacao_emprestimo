@@ -12,8 +12,6 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import static org.junit.Assert.*;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -82,8 +80,6 @@ public class EmprestimoServiceTest {
         assertEquals(new Double(1.9), emprestimo.getJuros());
         verify(emprestimoRepository).save(emprestimo);
     }
-
-
 
     @Before
     public void setup(){

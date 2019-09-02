@@ -9,19 +9,31 @@ import org.springframework.stereotype.Service;
 @Service
 public class ClienteService {
 
-    @Autowired
     private ClienteRepository clienteRepository;
+
+    @Autowired
+    public ClienteService(ClienteRepository clienteRepository) {
+        this.clienteRepository = clienteRepository;
+    }
 
     public Cliente saverOrUpdateCliente(Cliente cliente){
 
-        if(cliente.getRendimentoMensal() <= 2000)
-            cliente.setRisco(Risco.C);
-        else if(cliente.getRendimentoMensal() <= 8000)
-            cliente.setRisco(Risco.B);
-        else
-            cliente.setRisco(Risco.A);
+        cliente.setRisco(gerarRisco(cliente.getRendimentoMensal()));
 
-        return clienteRepository.save(cliente);
+        clienteRepository.save(cliente);
+
+        return cliente;
+    }
+
+    public Risco gerarRisco(Double rendimentoMensal) {
+        if(rendimentoMensal <= 2000d)
+            return Risco.C;
+        else if(rendimentoMensal <= 8000d)
+            return Risco.B;
+        else if(rendimentoMensal > 8000d)
+           return Risco.A;
+        else
+            throw new RuntimeException("Rendimento mensal inválido!");
     }
 
     public Iterable<Cliente> findAllClientes() { return clienteRepository.findAll();}

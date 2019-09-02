@@ -15,7 +15,7 @@ public class Cliente {
     @NotBlank(message = "Nome do cliente obrigatório.")
     private String nome;
     @NotNull(message = "Rendimento mensal obrigatório.")
-    private double rendimentoMensal;
+    private Double rendimentoMensal;
     @GeneratedValue
     private Risco risco;
     @NotBlank(message = "Endereço obrigatório.")

@@ -11,6 +11,16 @@ Iniciar back-end:
 > cd emprestimo/
 > mvn spring-boot:run
 
+Configurar o banco de dados:
+
+> cd /emprestimo/src/main/resources/
+Abrir arquivo "application.properties" e alterar as seguiqntes properties para conectar a o banco que desejar:
+URL do banco: spring.datasource.url
+Usuário: spring.datasource.username
+Senha: spring.datasource.password
+
+Além disso, a porta do servidor do back-end está setada para 8082, caso precisar altera-la, terá que mudar a chamada do front-end pois até o momento as chamadas ao back-end estão hardcoded no front-end. As chamadas ao back-end ficam nos arquivos "emprestimo_client/emprestimo-react-client/src/actions/emprestimoActions.js" e "/emprestimo_client/emprestimo-react-client/src/actions/clienteActions.js"
+
 ----
 Arquitetura:
 
